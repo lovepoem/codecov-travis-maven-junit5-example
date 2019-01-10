@@ -1,7 +1,14 @@
 package com.lovepoem.test2;
 
 public class BeanNotTest {
-    public void haha() {
-
+    public String haha() {
+        System.out.println("111");
+        System.out.println("111");
+        System.out.println("111");
+        System.out.println("111");
+        System.out.println("111");
+        System.out.println("111");
+        System.out.println("111");
+        return "";
     }
 }
