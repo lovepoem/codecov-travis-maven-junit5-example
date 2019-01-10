@@ -58,8 +58,8 @@ Travis CI + [Codecov][0] + Junit5 + jacoco + Maven Java Example
    ```
    Then push th code ,you will find that the door is open . the codecov report is uploaded
    
-* 3. Use `jacoco` instead of  `cobertura` ,because cobertura is out of maintain for several years
-   modify the config
+* 3. Use `jacoco` instead of  `cobertura` ,because cobertura is out of maintain for several years . 
+   Then please modify the config
             
    ```shell
    script:
