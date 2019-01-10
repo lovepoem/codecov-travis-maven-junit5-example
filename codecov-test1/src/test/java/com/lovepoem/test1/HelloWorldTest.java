@@ -1,6 +1,6 @@
 package com.lovepoem.test1;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,7 +9,7 @@ public class HelloWorldTest {
 
     private HelloWorld subject;
 
-    @BeforeAll
+    @BeforeEach
     public void setup() {
         subject = new HelloWorld();
     }
