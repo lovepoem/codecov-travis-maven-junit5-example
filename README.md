@@ -33,7 +33,7 @@ Travis CI + [Codecov][0] + Junit5 + jacoco + Maven Java Example
 
    But it is always not success:
    After CI success , jacoco should push the report to the codecov . but at first time jacoco cannot do it . It seems that there is a door ,but you cannot enter
-   I thick it's a bug of jacoco, now I have a hack method :
+   I thick it's a bug of jacoco, now I have a hack method to " Open the door ":
    
 * 1. Add denpendency of `cobertura-maven-plugin` in the `build` tag of  pom.xml
    ```xml
