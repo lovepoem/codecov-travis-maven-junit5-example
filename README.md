@@ -31,5 +31,82 @@ Travis CI + [Codecov][0] + Junit5 + Maven Java Example
 
 ## 4: Notice
 
-   After CI success , jacoco should push the report to the codecov . But first time jacoco cannot do it  
+   But it is always not success:
+   After CI success , jacoco should push the report to the codecov . but at first time jacoco cannot do it . It seems that there is a door ,but you cannot enter
+   I thick it's a bug of jacoco, now I have a hack method :
+   
+* 1. Add denpendency of `cobertura-maven-plugin` in the `build` tag of  pom.xml
+   ```xml
+       <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+           <artifactId>cobertura-maven-plugin</artifactId>
+           <version>2.7</version>
+           <configuration>
+               <formats>
+                   <format>html</format>
+                   <format>xml</format>
+               </formats>
+               <check />
+           </configuration>
+       </plugin>
+   ```
+* 2. Set the script in the .travis.yml
+   
+   ```shell
+   script:
+     - mvn cobertura:cobertura
+   ```
+   Then push th code ,you will find that the door is open . the codecov report is uploaded
+   
+* 3. Use `jacoco` instead of  `cobertura` ,because cobertura is out of maintain for several years
+   modify the config
+            
+   ```shell
+   script:
+     - mvn clean package
+   ```
+   
+   remove the `cobertura-maven-plugin` plugin
+   
+   and add
+   
+   ```xml
+           <plugin>
+               <groupId>org.jacoco</groupId>
+               <artifactId>jacoco-maven-plugin</artifactId>
+               <version>${maven-jacoco.version}</version>
+               <executions>
+                   <execution>
+                       <id>jacoco-initialize</id>
+                       <goals>
+                           <goal>prepare-agent</goal>
+                       </goals>
+                       <configuration>
+                           <propertyName>jacocoArgLine</propertyName>
+                       </configuration>
+                   </execution>
+                   <execution>
+                       <id>report-aggregate</id>
+                       <phase>verify</phase>
+                       <goals>
+                           <goal>report-aggregate</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-surefire-plugin</artifactId>
+               <version>${maven-surefire.version}</version>
+               <configuration>
+                   <useSystemClassLoader>true</useSystemClassLoader>
+                   <forkMode>once</forkMode>
+                   <argLine>${argline} ${jacocoArgLine}</argLine>
+                   <systemProperties>
+                       <!-- common shared -->
+                   </systemProperties>
+               </configuration>
+           </plugin>
+   ```
+   Then the new config can also upload the report now   
    
