@@ -30,4 +30,4 @@ Travis CI + [Codecov][0] + Junit5 + Maven Java Example
 [![codecov](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example/branch/master/graph/badge.svg)](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example)
 
 ## 4: Notice
-
+   
