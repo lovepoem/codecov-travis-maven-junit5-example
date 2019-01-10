@@ -1,15 +1,16 @@
 package com.lovepoem.test2;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WorldHahaTest {
     private WorldHaha subject;
 
-    @Before
+    @BeforeAll
     public void setup() {
         subject = new WorldHaha();
     }
@@ -26,7 +27,7 @@ public class WorldHahaTest {
 
     @Test
     public void testFail() {
-        Assert.assertEquals(true,true);
+        Assertions.assertEquals(true, true);
     }
 
 }
