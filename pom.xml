@@ -8,7 +8,6 @@
     <artifactId>codecov-travis-maven-junit5-example</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>codecov-test1</module>
         <module>codecov-test2</module>
     </modules>
     <packaging>pom</packaging>
