@@ -2,8 +2,8 @@
 Travis CI + [Codecov][0] + Junit5 + Maven Java Example
 ===============================
 ## 1: Add some code in  pom.xml and .travis.yml
-* 1). Add `cobertura-maven-plugin` plugin to your pom.xml file, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/pom.xml#L39-L50)
-* 2). Call `mvn cobertura:cobertura` during your CI tests, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/.travis.yml#L4)
+* 1). Add `jacoco-maven-plugin` and  `maven-surefire-plugin` plugin to your pom.xml file, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/pom.xml#L39-L50)
+* 2). Call `mvn clean package` during your CI tests, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/.travis.yml#L4)
 * 3). Call `bash <(curl -s https://codecov.io/bash)` at the end of your CI build, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/.travis.yml#L7)
   - Using Travis CI, CircleCI or AppVeyor **AND** the repository is public? **You're done!** No token needed.
   - Otherwise, please add your [repository token token][5].
@@ -28,3 +28,6 @@ Travis CI + [Codecov][0] + Junit5 + Maven Java Example
 ## 3: Add travis and codecov icon in  README.md
 [![Build Status](https://travis-ci.org/lovepoem/codecov-travis-maven-junit5-example.svg?branch=master)](https://travis-ci.org/lovepoem/codecov-travis-maven-junit5-example)
 [![codecov](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example/branch/master/graph/badge.svg)](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example)
+
+## 4: Notice
+
