@@ -65,7 +65,7 @@
                             <destFile>
                                 ${project.build.directory}/coverage-reports/jacoco.exec
                             </destFile>
-                                <propertyName>jacocoArgLine</propertyName>
+                            <propertyName>jacocoArgLine</propertyName>
                         </configuration>
                     </execution>
                     <execution>
