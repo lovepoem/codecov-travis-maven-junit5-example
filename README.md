@@ -1,5 +1,5 @@
 
-Travis CI + [Codecov][0] + Junit5 + jacoco + Maven Java Example
+Travis CI + Codecov + Junit5 + jacoco + Maven Java Example
 ===============================
 ## 1: Add some code in  pom.xml and .travis.yml
 * 1). Add `jacoco-maven-plugin` and  `maven-surefire-plugin` plugin to your pom.xml file, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/pom.xml#L51-L89)
