@@ -18,4 +18,6 @@ Travis CI + [Codecov][0] + Junit5 + jacoco + Maven Java Example
 [![codecov](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example/branch/master/graph/badge.svg)](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example)  
 
 ## 4: Notice
-  Use `jacoco-maven-plugin` plugin `version 0.8.2` to collect test coverage ,need jdk version: `java8`+    
+  Use `jacoco-maven-plugin` plugin `version 0.8.2` to collect test coverage ,need jdk version: `java8`+  
+  
+  So if you ues a lower jdk version , please see this repo : https://github.com/lovepoem/codecov-travis-maven-junit4-example  
