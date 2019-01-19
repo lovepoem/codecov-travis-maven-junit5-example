@@ -89,9 +89,6 @@
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <forkMode>once</forkMode>
                     <argLine>${jacocoArgLine}</argLine>
-                    <systemProperties>
-                        <!-- common shared -->
-                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
