@@ -20,4 +20,4 @@ Travis CI + [Codecov][0] + Junit5 + jacoco + Maven Java Example
 ## 4: Notice
   Use `jacoco-maven-plugin` plugin `version 0.8.2` to collect test coverage ,need jdk version: `java8`+  
   
-  **So if you ues a lower jdk version , please see this repo : https://github.com/lovepoem/codecov-travis-maven-junit4-example**  
+  **So if you ant to ues a lower jdk version , please see this repo : https://github.com/lovepoem/codecov-travis-maven-junit4-example**  
