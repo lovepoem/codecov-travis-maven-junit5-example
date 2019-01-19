@@ -14,6 +14,7 @@ Travis CI + Codecov + Junit5 + jacoco + Maven Java Example
   - login https://codecov.io/ and add lovepoem/codecov-travis-maven-junit5-example repository to https://codecov.io/
 
 ## 3: Add travis and codecov icon in  README.md
+[see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/README.md#L18-L19)
 [![Build Status](https://travis-ci.org/lovepoem/codecov-travis-maven-junit5-example.svg?branch=master)](https://travis-ci.org/lovepoem/codecov-travis-maven-junit5-example)
 [![codecov](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example/branch/master/graph/badge.svg)](https://codecov.io/gh/lovepoem/codecov-travis-maven-junit5-example)  
 
