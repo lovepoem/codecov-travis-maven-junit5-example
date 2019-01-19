@@ -49,7 +49,7 @@
                 <configuration>
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <forkMode>once</forkMode>
-                    <argLine>${argline} ${jacocoArgLine}</argLine>
+                    <argLine>${argline}</argLine>
                     <systemProperties>
                         <!-- common shared -->
                     </systemProperties>
