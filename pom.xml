@@ -85,6 +85,7 @@
                 <configuration>
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <forkMode>once</forkMode>
+                    <argLine>${jacocoArgLine}</argLine>
                 </configuration>
             </plugin>
         </plugins>
