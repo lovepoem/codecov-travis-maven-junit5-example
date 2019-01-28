@@ -1,7 +1,6 @@
 
 Travis CI + Codecov + Junit5 + jacoco + Maven + java8 above  Java Example
-===============================
-
+==============================
 ## 1: Add some code in  pom.xml and .travis.yml
 * 1). Add `jacoco-maven-plugin` and  `maven-surefire-plugin` plugin to your pom.xml file, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/pom.xml#L55-L96)
 * 2). Call `mvn clean package` during your CI tests, [see here](https://github.com/lovepoem/codecov-travis-maven-junit5-example/blob/master/.travis.yml#L11)
