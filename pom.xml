@@ -16,7 +16,7 @@
     <url>https://github.com/lovepoem/codecov-travis-maven-junit5-example</url>
     <properties>
         <junit-jupiter.version>5.3.2</junit-jupiter.version>
-        <maven-jacoco-plugin.version>0.8.2</maven-jacoco-plugin.version>
+        <maven-jacoco-plugin.version>0.8.3</maven-jacoco-plugin.version>
         <maven-surefire.version>2.22.1</maven-surefire.version>
         <argline>-server -Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8
             -Djava.net.preferIPv4Stack=true
