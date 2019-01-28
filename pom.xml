@@ -16,7 +16,7 @@
     <url>https://github.com/lovepoem/codecov-travis-maven-junit5-example</url>
     <properties>
         <junit-jupiter.version>5.3.2</junit-jupiter.version>
-        <maven-jacoco-plugin.version>0.8.2</maven-jacoco-plugin.version>
+        <maven-jacoco-plugin.version>0.8.3</maven-jacoco-plugin.version>
         <maven-surefire.version>2.22.1</maven-surefire.version>
         <argline>-server -Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8
             -Djava.net.preferIPv4Stack=true
@@ -51,33 +51,26 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${maven-jacoco-plugin.version}</version>
                 <executions>
                     <execution>
+                        <id>jacoco-initialize</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                         <configuration>
-                            <destFile>
-                                ${project.build.directory}/coverage-reports/jacoco.exec
-                            </destFile>
                             <propertyName>jacocoArgLine</propertyName>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>report</id>
-                        <phase>test</phase>
+                        <id>report-aggregate</id>
+                        <phase>verify</phase>
                         <goals>
-                            <goal>report</goal>
+                            <goal>report-aggregate</goal>
                         </goals>
-                        <configuration>
-                            <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile>
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -88,7 +81,7 @@
                 <configuration>
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <forkMode>once</forkMode>
-                    <argLine>${jacocoArgLine}</argLine>
+                    <argLine>${argline}</argLine>
                 </configuration>
             </plugin>
         </plugins>
