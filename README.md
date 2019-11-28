@@ -19,3 +19,4 @@ Travis CI + Codecov + Junit5 + jacoco + Maven + java8 above  Java Example
   Use `jacoco-maven-plugin` plugin `version 0.8.2` to collect test coverage without codecov token ,need jdk version: `java8`+  
   
   **So if you ues a lower jdk version , please see this repo : https://github.com/lovepoem/codecov-travis-maven-junit4-example**  
+ 
